@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC Shoes - Court Graffik | O Clássico do Skate</title>
+    <!-- Link para o arquivo de estilo externo (CSS) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho / Navegação -->
+    <header>
+        <div class="container">
+            <h1 class="logo">DC SHOES</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#detalhes">Detalhes</a></li>
+                    <li><a href="#onde-comprar">Onde Comprar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Principal de Apresentação com Galeria Interativa -->
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h2 class="titulo-destaque">DC Court Graffik</h2>
+                <p class="subtitulo">O clássico definitivo das pistas e das ruas. Com sua silhueta robusta dos anos 2000, o DC Court Graffik une cabedal em camurça ultra resistente, acolchoamento interno de alta densidade e o inconfundível logo superdimensionado. Conforto bruto e presença marcante em cada remada.</p>
+                <div class="botoes">
+                    <a href="#detalhes" class="btn btn-primario">Saiba Mais</a>
+                    <a href="#onde-comprar" class="btn btn-secundario">Ver Preço</a>
+                </div>
+            </div>
+            
+            <!-- Galeria de Fotos Interativa -->
+            <div class="hero-gallery">
+                <div class="foto-destaque">
+                    <img src="foto-1.jpg" alt="DC Court Graffik Lateral" id="imagem-principal">
+                </div>
+                <div class="miniaturas">
+                    <img src="foto-1.jpg" alt="Vista Lateral" class="thumb active" onclick="trocarFoto(this)">
+                    <img src="foto-2.jpg" alt="Vista Traseira" class="thumb" onclick="trocarFoto(this)">
+                    <img src="foto-3.jpg" alt="Com Caixa" class="thumb" onclick="trocarFoto(this)">
+                    <img src="foto-4.jpg" alt="Lateral Interna" class="thumb" onclick="trocarFoto(this)">
+                    <img src="foto-5.jpg" alt="Vista Frontal" class="thumb" onclick="trocarFoto(this)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Detalhes Técnicos -->
+    <section id="detalhes" class="detalhes">
+        <div class="container">
+            <h3 class="section-title">O Tênis de Skate Moderno e Robusto</h3>
+            <div class="grid-detalhes">
+                <div class="card-detalhe">
+                    <h4>Cabedal Durável</h4>
+                    <p>Construído em camurça e/ou couro de alta qualidade para suportar a lixa do skate e o uso diário.</p>
+                </div>
+                <div class="card-detalhe">
+                    <h4>Conforto Superior</h4>
+                    <p>Língua e colarinho densamente acolchoados fornecem proteção e suporte extra para o tornozelo.</p>
+                </div>
+                <div class="card-detalhe">
+                    <h4>Sola de Borracha</h4>
+                    <p>Sola de borracha resistente e aderente, projetada para maior controle sobre o board.</p>
+                </div>
+                <div class="card-detalhe">
+                    <h4>Design Icônico</h4>
+                    <p>O lendário logo da DC superdimensionado e bordado na lateral não passa despercebido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Onde Comprar -->
+    <section id="onde-comprar" class="compra">
+        <div class="container">
+            <h3 class="section-title">Pronto para a Sessão?</h3>
+            <p>Este clássico está disponível nas melhores skate shops e lojas online.</p>
+            <div class="compra-content">
+                <p class="preco">Preço estimado: R$ 549,90</p>
+                <a href="https://www.dcshoes.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-primario">
+                    Buscar na Loja Oficial
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé Oficial e Profissional -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 DC Shoes - Court Graffik Edition. Todos os direitos reservados.</p>
+            <p>Projetado para os verdadeiros amantes da cultura skate e streetwear.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para trocar a imagem na galeria -->
+    <script>
+        function trocarFoto(elemento) {
+            document.getElementById('imagem-principal').src = elemento.src;
+            let thumbs = document.querySelectorAll('.thumb');
+            thumbs.forEach(thumb => thumb.classList.remove('active'));
+            elemento.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
